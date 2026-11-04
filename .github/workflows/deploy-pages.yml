@@ -22,7 +22,7 @@ jobs:
       - name: Verify release files and notices
         shell: bash
         run: |
-          test "$(wc -l < SHA256SUMS)" -eq 43
+          test "$(wc -l < SHA256SUMS)" -eq 42
           test -d site && test ! -L site
           test -z "$(find site \( ! -type f ! -type d -o -type f -links +1 \) -print)"
           for notice in dm-sans-OFL.txt fraunces-OFL.txt phosphor-MIT.txt; do
